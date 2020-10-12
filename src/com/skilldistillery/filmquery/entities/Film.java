@@ -14,7 +14,10 @@ public class Film {
 	private double replacementCost;
 	private String rating;
 	private String specialFeatures;
-	List<Actor>actors;
+	private List<Actor>actors;
+	
+	public Film() {
+	}
 	
 	public Film(int id, String title, String description, int year, int language,
 			int duration, double rate, int length, double cost, String rating,
@@ -32,6 +35,7 @@ public class Film {
 		this.specialFeatures = features; 
 		
 	}
+
 
 	public int getId() {
 		return id;
@@ -120,6 +124,17 @@ public class Film {
 	public void setSpecialFeatures(String specialFeatures) {
 		this.specialFeatures = specialFeatures;
 	}
+	
+
+	public List<Actor> getActors() {
+		return actors;
+	}
+
+	public void setActors(List<Actor> actors) {
+		this.actors = actors;
+	}
+
+	
 
 	@Override
 	public int hashCode() {
