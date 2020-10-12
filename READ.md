@@ -7,7 +7,7 @@ This program allows a user to pull data from the film portion of our database an
 * Maven
 * Atom
 * Switch statements
-* Inheritance
+* OOP
 * Eclipse
 
 ### How to use
