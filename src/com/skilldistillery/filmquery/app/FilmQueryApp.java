@@ -49,12 +49,12 @@ public class FilmQueryApp {
 			switch (userInput) {
 
 			case 1:
-				System.out.println("Please enter a film ID:");
+				System.out.println("Please enter a filmId:");
 				filmId = input.nextInt();
 				Film result = (db.findFilmById(filmId));
 				if (result != null) {
 					System.out.println();
-					result.displayInfo();
+					result.displayFilmInfo();
 					System.out.println();
 				}
 				break;
@@ -66,7 +66,7 @@ public class FilmQueryApp {
 				if (results.size() != 0) {
 					for (Film film : results) {
 						System.out.println();
-						film.displayInfo();
+						film.displayFilmInfo();
 						System.out.println();
 					}
 				} else {

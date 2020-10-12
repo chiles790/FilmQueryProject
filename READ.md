@@ -5,8 +5,9 @@ This program allows a user to pull data from the film portion of our database an
 ### Skills I put to use
 * MYSQL
 * Maven
-* Java
 * Atom
+* Switch statements
+* Inheritance
 * Eclipse
 
 ### How to use

@@ -222,11 +222,12 @@ public class Film {
 				+ ", specialFeatures=" + specialFeatures + ", actors=" + actors + "]";
 	}
 
-	public void displayInfo() {
+	public void displayFilmInfo() {
 		System.out.println("Title: " + title);
 		System.out.println("Release Year: " + releaseYear);
 		System.out.println("Rating: " + rating);
 		System.out.println("Language: " + language);
+		System.out.println("Description: " + description);
 		System.out.println("List of actors in cast: " + actors);
 	}
 	
