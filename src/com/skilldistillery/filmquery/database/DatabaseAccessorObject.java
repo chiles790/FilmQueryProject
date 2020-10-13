@@ -64,11 +64,13 @@ public class DatabaseAccessorObject implements DatabaseAccessor {
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, actorId);
 			ResultSet ar = stmt.executeQuery();
-			while(ar.next()) {
+			if(ar.next()) {
 				actor = new Actor();
 				actor.setId(ar.getInt("id"));
 				actor.setFirstName(ar.getString("first_name"));
 				actor.setLastName(ar.getString("last_name"));
+			} else {
+				System.out.println("no actors found");
 			}
 			ar.close();
 			stmt.close();
@@ -87,7 +89,7 @@ public class DatabaseAccessorObject implements DatabaseAccessor {
 		List<Actor> actors = new ArrayList<>();
 		try {
 			Connection conn = DriverManager.getConnection(URL, user, pass);
-			String sql = "SELECT id, first_name, last_name FROM actor WHERE id = ?";
+			String sql = "SELECT actor.id, actor.first_name, actor.last_name FROM actor JOIN film_actor ON actor.id WHERE id = ?";
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, filmId);
 			ResultSet rs = stmt.executeQuery();

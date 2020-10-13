@@ -228,7 +228,18 @@ public class Film {
 		System.out.println("Rating: " + rating);
 		System.out.println("Language: " + language);
 		System.out.println("Description: " + description);
-		System.out.println("List of actors in cast: " + actors);
+		System.out.println("List of actors in cast: ");
+		for(Actor actor: actors) {
+		if(actor != null) {
+				
+				System.out.println(actor);
+				break;
+			}
+		else{
+			System.out.println("no actors found");
+		break;
+		}
+		}
 	}
 	
 }

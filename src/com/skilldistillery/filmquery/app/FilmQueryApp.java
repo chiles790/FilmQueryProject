@@ -56,6 +56,8 @@ public class FilmQueryApp {
 					System.out.println();
 					result.displayFilmInfo();
 					System.out.println();
+				} else {
+					System.out.println("No results found");
 				}
 				break;
 			case 2:
