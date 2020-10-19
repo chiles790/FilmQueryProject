@@ -214,6 +214,20 @@ public class Film {
 		return true;
 	}
 
+	public void displayFilmInfo() {
+		System.out.println("Title: " + title);
+		System.out.println("Release Year: " + releaseYear);
+		System.out.println("Rating: " + rating);
+		System.out.println("Language: " + language);
+		System.out.println("Description: " + description);
+		displayActors(actors);
+	}
+	public void displayActors(List<Actor> actors) {
+		System.out.println("List of actors: ");
+		for (Actor actor : actors) {
+			System.out.println(actor.getFirstName() + " " + actor.getLastName());
+		}
+	}
 	@Override
 	public String toString() {
 		return "Film [id=" + id + ", title=" + title + ", description=" + description + ", releaseYear=" + releaseYear
@@ -222,25 +236,6 @@ public class Film {
 				+ ", specialFeatures=" + specialFeatures + ", actors=" + actors + "]";
 	}
 
-	public void displayFilmInfo() {
-		System.out.println("Title: " + title);
-		System.out.println("Release Year: " + releaseYear);
-		System.out.println("Rating: " + rating);
-		System.out.println("Language: " + language);
-		System.out.println("Description: " + description);
-		System.out.println("List of actors in cast: ");
-		for(Actor actor: actors) {
-		if(actor != null) {
-				
-				System.out.println(actor);
-				break;
-			}
-		else{
-			System.out.println("no actors found");
-		break;
-		}
-		}
-	}
 	
 }
 

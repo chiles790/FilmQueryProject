@@ -1,12 +1,12 @@
 package com.skilldistillery.filmquery.entities;
 
-import java.awt.List;
+import java.util.List;
 
 public class Actor {
 	private int id;
 	private String firstName;
 	private String lastName;
-	private List films;
+	private List<Film> films;
 
 	public Actor() {
 	}
@@ -40,13 +40,12 @@ public class Actor {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public List getFilms() {
+	public List<Film> getFilms() {
 		return films;
 	}
-	public void setFilms(List films) {
+	public void setFilms(List<Film> films) {
 		this.films = films;
 	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -87,7 +86,7 @@ public class Actor {
 	}
 	@Override
 	public String toString() {
-		return "Actor = id: " + id + ", firstName: " + firstName + ", lastName: " + lastName;
+		return "Actor [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", films=" + films + "]";
 	}
-
+	
 }
